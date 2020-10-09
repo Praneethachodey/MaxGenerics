@@ -1,6 +1,17 @@
 package come.bridgelabz.maxintegers.maxInteger;
 
-public class maxInteger {
+public class maxInteger<T extends Comparable<T>> {
+	T one;
+	T two;
+	T three;
+	
+
+	public maxInteger(T one, T two, T three) {
+		super();
+		this.one = one;
+		this.two = two;
+		this.three = three;
+	}
 
 	public static Integer maxInt(Integer one, Integer two, Integer three) {
 		Integer max = one;
@@ -32,6 +43,10 @@ public class maxInteger {
 
 	}
 	
+	public T testMaximum() {
+		return maxGeneric(one, two, three);
+	}
+
 	public static <T extends Comparable<T>> T maxGeneric(T one, T two, T three) {
 		T max = one;
 		if (two.compareTo(max) > 0)
@@ -41,7 +56,5 @@ public class maxInteger {
 		return max;
 
 	}
-	
-	
 
 }
