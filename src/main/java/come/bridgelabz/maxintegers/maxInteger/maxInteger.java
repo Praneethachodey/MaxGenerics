@@ -58,8 +58,13 @@ public class maxInteger<T extends Comparable<T>> {
 			max = three;
 		if(elements.length>0)
 			max=maxGenericOptions(elements,max);
+		printMax(max);
 		return max;
 
+	}
+
+	private static<T> void printMax(T max) {
+		System.out.println(max);
 	}
 
 	private static <T extends Comparable<T>> T maxGenericOptions(T[] elements, T max) {
