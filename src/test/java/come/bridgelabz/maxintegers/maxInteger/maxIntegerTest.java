@@ -57,5 +57,23 @@ public class maxIntegerTest {
 		String max = maxInteger.maxString("Apple", "Banana", "Peach");
 		Assert.assertEquals("Peach",max);
 	}
+	
+	@Test
+	public void maxGenericsInteger() {
+		Integer max = maxInteger.maxGeneric(67, 10, 25);
+		Assert.assertSame(67,max);
+	}
+	
+	@Test
+	public void maxGenericsFloat() {
+		Float max = maxInteger.maxGeneric(67.25f, 10.67f, 25.98f);
+		Assert.assertEquals(67.25,max,0.0);
+	}
+	
+	@Test
+	public void maxGenericsString() {
+		String max = maxInteger.maxGeneric("Apple", "Peach", "Banana");
+		Assert.assertSame("Peach",max);
+	}
 
 }

@@ -32,6 +32,16 @@ public class maxInteger {
 
 	}
 	
+	public static <T extends Comparable<T>> T maxGeneric(T one, T two, T three) {
+		T max = one;
+		if (two.compareTo(max) > 0)
+			max = two;
+		if (three.compareTo(max) > 0)
+			max = three;
+		return max;
+
+	}
+	
 	
 
 }
